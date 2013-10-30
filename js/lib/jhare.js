@@ -1,131 +1,207 @@
 
 
 /**
- * Object Scroll
- * @returns
+ * Define scroll object
  */
-function Scroll(){
-	
-}
-
-
-/**
- * Object Component
- * @returns
- */
-function Component (){
-	
+function Scroll() {
+	/* Define private variables */
 	var type;
+	var id;
+	var value;
 
+	/* Store object reference for calling public methods */
+  	var self = this;
+  	
+  	/* Constructor */
+  	function c_Scroll() {
+  	}
+
+	// Launch object constructor
+	c_Scroll();
 }
 
 
 /**
- * Object Section
- * @returns
+ * Define component object
+ */
+function Component() {
+	/* Define private variables */
+	var type;
+	var id;
+	var value;
+	
+	/* Store object reference for calling public methods */
+  	var self = this;
+  	
+  	/* Constructor */
+  	function c_Component() {
+  	}
+
+	// Launch object constructor
+	c_Component();
+}
+
+
+/**
+ * Define section object
  */
 function Section() {
+	/* Define private variables */
+	var components = new Array();
 	
-	var components;
+	/* Store object reference for calling public methods */
+  	var self = this;
+  	
+  	/* Constructor */
+  	function c_Section() {
+  	}
+  	
+	/**
+	 * Get component
+	 * @param component id
+	 * @returns component
+	 */
+	this.getComponent = function(componentid) {
+	}
 	
 	/**
-	 * Get Component
+	 * Add component
+	 * @param component id
+	 * @param component
 	 */
+	this.addComponent = function(componentid, component) {
+	}
 	
 	/**
-	 * Add Component
+	 * Remove component
+	 * @param component id
 	 */
-	
-	/**
-	 * Show Component
-	 */
-	
-	/**
-	 * Hide Component
-	 */
+	this.removeComponent = function(componentid) {
+	}
+	 
+	// Launch object constructor
+	c_Section();
 }
 
 
 /**
- * Object Page
- * @returns
+ * Define page object
+ * param page id
  */
-function Page() {
+function Page(pageid) {
+	/* Define private variables */
+	var header = new Section();
+	var content = new Section();
+	var footer = new Section();
+	var id = pageid;
+	var title = '';
+	var scroll = new Scroll();
 	
-	var header;
-	var content;
-	var footer;
+	/* Store object reference for calling public methods */
+  	var self = this;
 	
-	/**
-	 * Get Header
-	 */
-	
-	/**
-	 * Add Header
-	 */
-	
-	/**
-	 * Show Header
-	 */
+	/* Constructor */
+	function c_Page() {
+	}
 	
 	/**
-	 * Hide Header
+	 * Get header
+	 * @returns header
 	 */
+	this.getHeader = function() {
+	}
 	
 	/**
-	 * Get Content
+	 * Set header
+	 * @param header
 	 */
+	this.setHeader = function(section) {
+	}
 	
 	/**
-	 * Add Content
+	 * Get content
+	 * @returns content
 	 */
+	this.getContent = function() {
+	}
 	
 	/**
-	 * Show Content
+	 * Set content
+	 * @param content
 	 */
+	this.setContent = function(section) {
+	}
 	
 	/**
-	 * Get Footer
+	 * Get footer
+	 * @returns footer
 	 */
+	this.getFooter = function() {
+	}
 	
 	/**
-	 * Add Footer
+	 * Set footer
+	 * @param footer
 	 */
-	
-	/**
-	 * Show Footer
-	 */
-	
-	/**
-	 * Hide Footer
-	 */
+	this.setFooter = function(section) {
+	}
 
+	/**
+	 * Get page id
+	 * @returns page id
+	 */
+	this.getId = function() {
+	}
+	
+	/**
+	 * Get title
+	 * @returns title
+	 */
+	this.getTitle = function() {
+	}
+	
+	/**
+	 * Set title
+	 * @param title
+	 */
+	this.setTitle = function(title) {
+	}
+	
+	/**
+	 * Get scroll
+	 * @returns scroll
+	 */
+	this.getScroll = function() {
+	}
+
+	// Launch object constructor
+	c_Page();
 }
 
 
 /**
- * Object App
- * @returns
+ * Defines application object for jhare library
  */
 function App() {
 	/* Define private variables */
-  	var pages = 'private var';
-	var navigation;
+  	var pages = new Array();
+	var navigation = new Array();
 	var rootPath = '';
 	
 	/* Store object reference for calling public methods */
   	var self = this;
 
+	/* Constructor */
 	function c_App() {
 		// Get path to root
 		var rootPath = location.href.replace('index.html', '');
 		rootPath = rootPath.replace('#', ''); 
 	}
 
-	function private_method1() {
+	/*function private_method1() {
 		// I can read the public method
 		self.showLoading();
-	}
+	}*/
 	
 	/**
 	 * Get Page

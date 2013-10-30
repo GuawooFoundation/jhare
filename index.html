@@ -2,107 +2,28 @@
 <head>
 	<title>Custom App</title>
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+	
+	<!-- Load CSS jhare stylesheet -->
 	<link rel="stylesheet" href="css/jhare.css">
+	
+	<!-- Load JS jhare script -->
+	<script type="text/javascript" src="js/lib/jhare.js"></script>
+
+	<!-- Script for initialize the library -->
+	<script type="text/javascript">
+
+
+		// Initialize jhare
+		jhare.addPage('PageOne', true);
+		//jhare.addPage('PageTwo', false);
+		//jhare.addPage('PageThree', false);
+
+		jhare.showPage(jhare.getDefaultPage());
+	
+	</script>
 </head>
-<body class="android">
+<body class="android"> <!-- TODO only for testing -->
 <!-- Main container -->
 <div id="container" style="background-color: #FFFFFF;"></div>
-
-<!-- Load JS files -->
-<script type="text/javascript" src="js/lib/jhare.js"></script>
-
-<script type="text/javascript">
-
-
-	// Start jhare
-	//var rootPath = location.href.replace('index.html', '');
-	//rootPath = rootPath.replace('#', ''); 
-	//jhare.setRoot(rootPath);
-
-	// Add pages
-	jhare.addPage('PageOne', true);
-	//jhare.addPage('PageTwo', false);
-	//jhare.addPage('PageThree', false);
-
-	jhare.loadPage(jhare.getDefaultPage());
-	
-	
-</script>
-
-
-
-<!--
-<script type="text/javascript">
-	// Cordova
-	var isCordova = true;
-	if (navigator.userAgent.toLowerCase().match(/android/)) {
-		document.write('<script charset="utf-8" src="js/lib/cordova-2.4.0-android.js"><\/script>');
-	} else if (navigator.userAgent.toLowerCase().match(/iphone/)
-			|| navigator.userAgent.toLowerCase().match(/ipad/)) {
-		document.write('<script charset="utf-8" src="js/lib/cordova-2.3.0-ios.js"><\/script>');
-	} else {
-		isCordova = false;
-	}
-</script>
-<script type="text/javascript" src="js/lib/fastclick.js"></script>
-<script type="text/javascript" src="js/lib/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="js/lib/iscroll.js"></script>
-<script type="text/javascript" src="js/lib/mustache.js"></script>
-<script type="text/javascript" src="js/lib/guapp-0.1.0.js"></script>
-
-<script type="text/javascript">
-
-function exitApp() {
-	navigator.app.exitApp();
-}
-
-// Start guapp
-var rootPath = location.href.replace('index.html', '');
-rootPath = rootPath.replace('#', ''); 
-guapp.setRoot(rootPath);
-try { guapp.setExitCallback(exitApp); } catch(e) {};
-
-// Add pages
-guapp.addPage('PageOne', true, true);
-guapp.addPage('OfferDetail', false, false);
-guapp.addPage('OffersByShop', false, false);
-guapp.addPage('ShopList', false, true);
-guapp.addPage('ShopDetail', false, false);
-guapp.addPage('ShopMap', false, true);
-guapp.addPage('SearchPreferences', false, false);
-guapp.addPage('Preferences', false, false);
-guapp.addPage('Buyoffer', false, false);
-guapp.addPage('Localiza', false, false);
-guapp.addPage('HowToGo', false, false);
-guapp.addPage('ShopMap', false, true);
-
-// Check cordova present
-if(isCordova) {
-	// Init cordova
-	//document.addEventListener('deviceready', guarket.initialize, true);
-} else {
-	// Mockup
-	console.log('[EVENT] Device ready');
-	
-	// Control keys over input
-	$(document).keypress(function(event) {
-		if (event.which == 13) {
-			event.preventDefault();
-		}
-	});
-}
-
-guapp.loadPage(guapp.getDefaultPage());
-
-</script>
--->
- 
-<!--  
-<div class="indexLoading">
-	<img alt="guarket" src="img/logos/guarket.png">
-	<div class="guawoo"><img alt="guawoo" src="img/logos/guawoo.png"></div>
-</div>
-<div class="pageLoading"><img alt="loading" src="img/slider/loader.gif"></div>
- -->
 </body>
 </html>
