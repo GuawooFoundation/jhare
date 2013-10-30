@@ -1,0 +1,308 @@
+/* Common 
+-----------------------------------------------------------------------------------------------------------*/
+
+/*#container { width: 320px!important; } /*Iphone 320 p’xeles de ancho por 480 p’xeles de alto*/
+
+body { background-color: #FFF; font-size: 14px; font-family: HelveticaNeue-Light, HelveticaNeue, Helvetica, Arial; font-weight: normal; -webkit-user-select: none; -webkit-text-size-adjust: none; }
+
+body, 
+ul, 
+li { padding: 0; margin: 0; border: 0; }
+
+a { color: inherit; text-decoration: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+a:active { color: #c4c4c4!important; }
+
+h1 { font-size: 16px; }
+h2 { font-size: 14px; font-weight: normal; }
+h3 { font-size: 12px; }  
+
+small { font-size: 11px; color: #8e8e93; }
+
+.clear { clear: both; }
+
+/* Show in iOs or Android */
+.android .showInIos,
+.ios .showInAndroid { display: none!important; }
+
+
+/* Header 
+-----------------------------------------------------------------------------------------------------------*/
+header {
+	position: absolute;
+	height: 44px;
+	background: #F8F8F8; /*HEADER COLOR*/
+	z-index:2;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	color: #000;
+	border-bottom: 1px solid #c8c8c8;
+}
+
+header h1 {
+    line-height: 46px;
+    margin: 0px;
+}
+
+header .lbtn, 
+header .rbtn { position: absolute; top: 10px; height: 27px; display: block; padding: 0px 10px 0px 8px; line-height: 27px; color: #007aff; font-size: 16px; }
+
+header .lbtn { left: 8px; }
+
+header .rbtn { right: 8px; }
+
+header .arrow-left { position: absolute; height: 44px; width: 44px; cursor: pointer; }
+header .arrow-left img[alt="back"] { position: absolute; left: 8px; top: 12px; height: 20px; }
+header .arrow-left span { color: #007aff; font-size: 16px; position: relative; top: 14px; }
+header .arrow-left span:active { color: #c4c4c4; }
+
+/* ios */
+.ios header,
+.ios header h1 { text-align: center; }
+
+.ios header h1 { font-weight: bold; }
+
+.ios header .arrow-left span { left: 20px; }	
+	
+/* android */
+.android header img[alt="icoPage"] { position: absolute; left: 12px; top: 12px; height: 20px; width: 20px; }
+.android header h1 { position: absolute; left: 42px; font-weight: normal; }
+
+.android header .arrow-left img[alt="back"] { width: 7px; }
+.android header .arrow-left img[alt="icoPage"] { position: absolute; left: 18px; top: 12px; height: 20px; width: 20px; }
+
+.android header .arrow-left span { left: 40px; }
+
+.android header .rbtn img[alt="icoLink"] { position: relative; top: 4px; height: 20px; width: 20px; margin-left: 4px; }
+
+
+/* Content 
+-----------------------------------------------------------------------------------------------------------*/
+.content { position: absolute; z-index: 1; top: 43px; width: 100%; overflow: auto; background: #efeff4; }
+
+/* Pages no Footer */
+.noFooter { bottom: 0!important; }
+
+/* ios */
+.ios .content { bottom: 44px; }
+
+/* android */
+.android .content { bottom: 0px; padding-bottom: 24px; }
+
+
+/* Footer 
+-----------------------------------------------------------------------------------------------------------*/
+footer { position: absolute; left: 0; bottom: 0; width: 100%; height: 44px; z-index: 999; padding: 0; background: #F7F7F7;	border-top: 1px solid #c8c8c8; text-align: center; }
+footer img { width: 26px; }
+footer small { display: block; }
+
+
+/* Loading 
+-----------------------------------------------------------------------------------------------------------*/
+.pageLoading { position: absolute; z-index: 99999; background: #FFFFFF; width: 100%; height: 100%; opacity: 0.7; text-align: center; }
+.pageLoading img { position: relative; top: 50%; width: 30px; height: 30px; }
+
+
+/* Buttons 
+-----------------------------------------------------------------------------------------------------------*/
+button { width: 100%; min-height: 44px; border: none; font-size: 14px; margin:0; padding: 0; cursor: pointer; }
+button:active { color: #c4c4c4!important; }
+button:focus { outline: none; }
+
+/* Group Buttons */
+.blockButtons { width: 100%; display: table; text-align: center; }
+
+/* Number Buttons */
+.blockButtons button { border-right: 1px solid #c8c8c8; }
+
+.blockButtons .oneButtons { width: 100%; } 
+
+.blockButtons .twoButtons, 
+.blockButtons .threeButtons, 
+.blockButtons .fourButtons, 
+.blockButtons .fiveButtons { float: left; }
+
+.blockButtons .twoButtons { width: 50%; }
+.blockButtons .threeButtons { width: 33.3%; }
+.blockButtons .fourButtons { width: 25%; }
+.blockButtons .fiveButtons { width: 20%; }
+
+/* ios */
+.ios button { background: #F8F8F8; color: #007aff; }
+.ios .blockButtons button { border-right: 1px solid #c8c8c8; }
+.ios .blockButtons .last button { border-right: none!important; }
+
+/* android */
+.android button { background: #d6d6d6; color: #333333; border-bottom: 1px solid #787878; }
+.android .blockButtons button { border-top: 1px solid #e4e4e4; border-right: 1px solid #cbcbcb; border-left: 1px solid #cbcbcb; }
+
+
+/* Section 
+-----------------------------------------------------------------------------------------------------------*/
+section article { background: #efeff4; }
+section article header { position: relative; background: none; border: none; }
+section article header h2 { text-transform: uppercase; color: #808080; margin: 0; }
+section article ul .last { border-bottom: none; } /*Important class on last li*/
+section article li { list-style: none; border-bottom: 1px solid #c8c8c8; }
+section article li a { cursor:pointer; }
+section article li a .icon-right { float: right; height: 14px; }
+section article li a span { position: relative; }
+
+/* li "list" */
+section .list li a .icon-right { position: relative; top: 15px; }
+section .list li a span { top: 15px; }
+
+/* li carries Secondary "text" */
+section .text li a span { top: 8px; }
+section .text li a small { position: relative; top: 8px; left: 12px; }
+
+/* Only when li carries "icon-left" */
+section .left li a .icon-left { float: left; margin-left: 12px; height: 26px; padding-top: 10px; }
+
+/* Common "list" "text" "icon-left" */
+section .list li,
+section .text li,
+section .left li { height: 44px; }
+
+section .list li a,
+section .text li a,
+section .left li a { position: absolute; left: 0; width: 100%; height: 44px; }
+
+/* Detail Image Block */
+section .detail .image { text-align: center; border-bottom: none; }
+section .detail .image img { max-height: 200px; }
+section .detail .selector { text-align: center; }
+section .detail .selector img { width: 22px; margin: 12px 6px; }
+
+/* Detail Description Block */
+section .description li { min-height: 44px; border: none; margin: 0; }
+section .description li span { position: relative; top: 8px; } 
+section .description li small { position: relative; top: 5px; }
+
+/* Detail Description Block & "icon-left" */
+section .description li .icon-left { float: left; height: 26px; padding-top: 10px; }
+section .ico li span { position: relative; top: 8px; left: 12px; } 
+section .ico li small { position: relative; top: 5px; left: 12px; }
+
+/* ios */
+.ios section article header { text-align: left; }
+.ios section article header h2 { padding: 18px 0 0 12px; }
+.ios section article ul { padding-left: 12px; background: #FFF; border-top: 1px solid #c8c8c8; border-bottom: 1px solid #c8c8c8; }
+.ios section article li a span { left: 12px; }
+
+.ios section article li a .icon-right { margin-right: 12px; }
+
+.ios section .left li { margin-left: 38px; } /*Important class on li "left"*/
+.ios section .ico li { margin-left: 0px!important; } /*Important class on li "ico"*/
+
+/* android */
+.android section article { padding: 0 12px; }
+.android section article header { height: auto!important; }
+.android section article header h2 { padding: 18px 0 6px 6px; border-bottom: 2px solid #c8c8c8; }
+.android section article li a span,
+.android section article li a small { left: 18px; }
+
+.android section article li a .icon-right { margin-right: 18px; }
+
+.android section .description ul { padding: 6px; } /*Important class on ul "description"*/
+
+.android section .left li a .icon-left { margin-left: 18px!important; }
+
+.android section .left li a span,
+.android section .left li a small { left: 12px!important; }
+
+
+/* Forms 
+-----------------------------------------------------------------------------------------------------------*/
+section article form ul li { height:44px; }
+section article form ul li label { position: relative; top: 15px; font-size: 14px;}
+section article form ul li input { position: relative; top: 15px; left: 12px; font-size: 14px; border: none; background: none; }
+section article form ul li input:focus { outline: none; }
+
+section article form ul .text-area { height: auto!important; padding-right: 12px; }
+section article form ul .text-area label { display: block; }
+section article form ul .text-area textarea { width: 100%; margin-top: 20px; margin-bottom: 8px; font-size: 14px; border: none; background: none; }
+section article form ul .text-area textarea:focus { outline: none; }
+
+/* ios */
+.ios section article form ul .button { padding: 12px 12px 12px 0; }
+
+/* android */
+.android section article form ul li { padding: 0 6px; }
+.android section article form ul li input,
+
+.android section article form ul .text-area textarea { border-bottom: 1px solid #c8c8c8!important; }
+
+.android section article form ul .button { padding: 0; }
+
+
+/* Scroller 
+-----------------------------------------------------------------------------------------------------------*/
+.scroller { position:absolute; z-index:1; top: 1px; width:100%; padding:0; }
+.scroller ul { list-style:none; margin:0; width:100%; }
+
+
+/* Scroller - Pull down styles
+-----------------------------------------------------------------------------------------------------------*/
+.pullUp { border-bottom: 1px solid #ccc; float: left; width: 100%; }
+
+.pullDown { border-up: 1px solid #ccc; }
+
+.pullUp, 
+.pullDown { background: #fafafa; height:40px; line-height:40px; padding:0 5px 2px 5px; font-size:14px; color:#888; }
+
+.pullUp .pullUpIcon, 
+.pullDown .pullDownIcon { display:block; float:left; width:40px; height:40px; background:url(images/pull-icon@2x.png) 0 0 no-repeat; -webkit-background-size:40px 80px; background-size:40px 80px; -webkit-transition-property:-webkit-transform; -webkit-transition-duration:250ms; }
+
+.pullUp .pullUpIcon { -webkit-transform:rotate(-180deg) translateZ(0); }
+.pullDown .pullDownIcon { -webkit-transform:rotate(0deg) translateZ(0); }
+
+
+.pullUp.flip .pullUpIcon { -webkit-transform:rotate(0deg) translateZ(0); }
+.pullDown.flip .pullDownIcon { -webkit-transform:rotate(-180deg) translateZ(0); }
+
+.pullUp.loading .pullUpIcon,
+.pullDown.loading .pullDownIcon { background-position:0 100%; -webkit-transform:rotate(0deg) translateZ(0); -webkit-transition-duration:0ms; -webkit-animation-name:loading; -webkit-animation-duration:2s; -webkit-animation-iteration-count:infinite; -webkit-animation-timing-function:linear; }
+
+@-webkit-keyframes loading {
+	from { -webkit-transform:rotate(0deg) translateZ(0); }
+	to { -webkit-transform:rotate(360deg) translateZ(0); }
+}
+
+.pullDownLabel { display: block!important; min-width: 230px!important; height: 50px!important; } /*FIX VOLVER EN IOS*/
+
+
+
+
+
+
+
+
+
+
+
+
+/* Gallery 
+-----------------------------------------------------------------------------------------------------------
+.photo { width: 100%; height: 200px; }
+
+.photoIndicators { text-align: center; margin-top: 20px; }
+
+.photoIndicators span {
+	display: inline-block;
+	height: 10px;
+	width: 10px;
+	margin: 0 10px 0 0;
+	padding: 0;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+	background: #c5c5c5;
+	overflow: hidden;
+}
+
+.photoIndicators span.current { background: #009933; }
+*/
+
+
